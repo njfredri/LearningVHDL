@@ -7,7 +7,14 @@ if [ $# -eq 0 ]; then
 fi
 
 # If arguments are provided, move to provided directory
-cd $1/sim
+cd $1
 vivado -mode tcl -source sim.tcl
-rm rf Xilinx*
-rm -rf
+rm -rf .Xil*
+rm -rf xsim.dir
+rm vivado_*
+rm xsim*
+rm xvhdl*
+rm xelab.log
+rm xelab.pb
+rm vivado.jou
+rm vivado.log

@@ -3,8 +3,9 @@
 # cd $outputDir
 
 #simulate
-exec xvhdl ../and.vhd ../tb.vhd
-exec xelab -debug typical tb_and_gate                 # create simulation snapshot
-exec xsim -gui tb_and_gate                            # run simulation and open GUI
+exec xvhdl and.vhd
+exec xvhdl tb.vhd ;
+exec xelab -debug typical tb_and_gate
+exec xsim -gui tb_and_gate -wdb sim.wdb
 
 exit
